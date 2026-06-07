@@ -12,10 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('seasons', function (Blueprint $table) {
-    $table->id();
-    $table->string('year');
-    $table->timestamps();
-});
+            $table->id();
+            $table->string('year'); // ex: "2023-2024"
+            $table->string('label')->nullable(); // ex: "Top 14 2023-2024"
+            $table->timestamps();
+        });
     }
 
     /**

@@ -11,16 +11,20 @@ return new class extends Migration
      */
     public function up(): void
     {
-       Schema::create('players', function (Blueprint $table) {
-    $table->id();
-    $table->string('name');
-    $table->string('position'); // 9,10,15 etc.
-    $table->integer('attack');
-    $table->integer('defense');
-    $table->integer('stamina');
-    $table->foreignId('team_id')->nullable()->constrained();
-    $table->timestamps();
-});
+        Schema::create('players', function (Blueprint $table) {
+            $table->id();
+            $table->unsignedBigInteger('real_player_id')->nullable()->index();
+            $table->string('name');
+            $table->integer('number')->nullable();
+            $table->integer('attack')->default(50);
+            $table->integer('defense')->default(50);
+            $table->integer('stamina')->default(50);
+            $table->integer('speed')->default(50);
+            $table->integer('rating')->default(50);
+            $table->foreignId('team_id')->nullable()->constrained();
+            $table->foreignId('season_id')->constrained();
+            $table->timestamps();
+        });
     }
 
     /**

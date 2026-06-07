@@ -1,14 +1,9 @@
-FROM php:8.3-cli
-
-WORKDIR /var/www
+FROM php:8.3-fpm
 
 RUN apt-get update && apt-get install -y \
-    git unzip curl libzip-dev libpng-dev
+    libzip-dev zip unzip curl \
+    && docker-php-ext-install pdo pdo_mysql zip
 
-# extensions PHP essentielles
-RUN docker-php-ext-install pdo pdo_mysql mysqli
-
-# Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-CMD ["sleep", "infinity"]
+WORKDIR /var/www

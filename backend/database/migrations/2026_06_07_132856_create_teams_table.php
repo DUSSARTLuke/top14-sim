@@ -11,12 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-      Schema::create('teams', function (Blueprint $table) {
-    $table->id();
-    $table->string('name');
-    $table->string('city')->nullable();
-    $table->timestamps();
-});
+        Schema::create('teams', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->string('city')->nullable();
+            $table->string('logo')->nullable();
+            $table->foreignId('season_id')->constrained();
+            $table->timestamps();
+        });
     }
 
     /**
