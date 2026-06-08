@@ -10,14 +10,41 @@ const router = createRouter({
       component: HomeView,
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue'),
+      path: '/draft',
+      name: 'draft',
+      component: () => import('../views/DraftView.vue'),
+    },
+    {
+      path: '/draft/:id',
+      name: 'draft-edit',
+      component: () => import('../views/DraftView.vue'),
+    },
+    {
+      path: '/simulation/:draftId',
+      name: 'simulation',
+      component: () => import('../views/SimulationView.vue'),
+    },
+    {
+      path: '/history',
+      name: 'history',
+      meta: { requiresAuth: true },
+      component: () => import('../views/HistoryView.vue'),
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: () => import('../views/LoginView.vue'),
     },
   ],
+})
+
+// Guard — redirige vers login si page protégée
+router.beforeEach((to, from, next) => {
+  if (to.meta.requiresAuth && !localStorage.getItem('auth_token')) {
+    next({ name: 'login' })
+  } else {
+    next()
+  }
 })
 
 export default router

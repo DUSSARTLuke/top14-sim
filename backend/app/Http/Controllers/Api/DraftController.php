@@ -87,9 +87,12 @@ class DraftController extends Controller
             'position_number' => 'required|integer|min:1|max:15',
         ]);
 
-        $this->draftService->addPlayerToDraft($draft->id, $data['player_id'], $data['position_number']);
-
-        return response()->json($draft->load('players'), 201);
+        try {
+            $this->draftService->addPlayerToDraft($draft->id, $data['player_id'], $data['position_number']);
+            return response()->json($draft->load('players'), 201);
+        } catch (\Exception $e) {
+            return response()->json(['error' => $e->getMessage(), 'trace' => $e->getTraceAsString()], 500);
+        }
     }
 
     public function removePlayer(Request $request, Draft $draft, $playerId)

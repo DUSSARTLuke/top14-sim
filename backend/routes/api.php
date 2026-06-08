@@ -18,6 +18,7 @@ Route::apiResource('seasons',   SeasonController::class)->only(['index', 'show']
 Route::apiResource('teams',     TeamController::class)->only(['index', 'show']);
 Route::apiResource('positions', PositionController::class)->only(['index', 'show']);
 Route::apiResource('players',   PlayerController::class)->only(['index', 'show']);
+Route::post('/players/roll', [PlayerController::class, 'roll']);
 
 // Drafts publics
 Route::apiResource('drafts', DraftController::class);

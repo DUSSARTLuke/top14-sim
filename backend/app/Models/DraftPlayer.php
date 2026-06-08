@@ -6,15 +6,23 @@ use Illuminate\Database\Eloquent\Model;
 
 class DraftPlayer extends Model
 {
+
+    protected $table = 'draft_player';
     protected $fillable = ['draft_id', 'player_id', 'position_number'];
 
-    public function draft()
+    // Dans Draft.php
+    public function players()
     {
-        return $this->belongsTo(Draft::class);
+        return $this->belongsToMany(Player::class, 'draft_player')
+            ->withPivot('position_number')
+            ->withTimestamps();
     }
 
-    public function player()
+    // Dans Player.php
+    public function drafts()
     {
-        return $this->belongsTo(Player::class);
+        return $this->belongsToMany(Draft::class, 'draft_player')
+            ->withPivot('position_number')
+            ->withTimestamps();
     }
 }
