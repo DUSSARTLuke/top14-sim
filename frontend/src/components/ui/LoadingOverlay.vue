@@ -25,7 +25,7 @@ defineProps({ show: { type: Boolean, default: false } })
   width: 48px;
   height: 48px;
   border: 4px solid rgba(255,255,255,0.1);
-  border-top-color: #2563eb;
+  border-top-color: #C9A84C ;
   border-radius: 50%;
   animation: spin 0.7s linear infinite;
 }

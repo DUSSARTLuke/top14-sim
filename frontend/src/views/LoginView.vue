@@ -108,7 +108,7 @@ const handleSubmit = async () => {
 .auth-tabs {
   display: flex;
   gap: 0;
-  background-color: #0f1923;
+  background-color: #0a0a0a;
   border-radius: 8px;
   padding: 4px;
 }
@@ -127,7 +127,7 @@ const handleSubmit = async () => {
 }
 
 .auth-tab--active {
-  background-color: #2563eb;
+  background-color: #C9A84C ;
   color: #ffffff;
 }
 
@@ -149,7 +149,7 @@ const handleSubmit = async () => {
 }
 
 .input {
-  background-color: #0f1923;
+  background-color: #0a0a0a;
   color: #ffffff;
   border: 1px solid #334155;
   border-radius: 8px;
@@ -160,7 +160,7 @@ const handleSubmit = async () => {
 
 .input:focus {
   outline: none;
-  border-color: #2563eb;
+  border-color: #cba233 ;
 }
 
 .auth-error {
@@ -184,7 +184,7 @@ const handleSubmit = async () => {
 }
 
 .btn--primary {
-  background-color: #2563eb;
+  background-color: #C9A84C ;
   color: #ffffff;
 }
 

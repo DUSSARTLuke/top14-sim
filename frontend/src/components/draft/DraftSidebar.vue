@@ -106,7 +106,7 @@ const onSelect = (player) => {
 }
 
 .input, .select {
-  background-color: #0f1923;
+  background-color: #0a0a0a;
   color: #ffffff;
   border: 1px solid #334155;
   border-radius: 8px;
@@ -118,7 +118,7 @@ const onSelect = (player) => {
 .input::placeholder { color: #475569; }
 .input:focus, .select:focus {
   outline: none;
-  border-color: #2563eb;
+  border-color: #cba233 ;
 }
 
 .sidebar-list {

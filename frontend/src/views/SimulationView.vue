@@ -268,7 +268,7 @@ const eventIcon = (type) => {
 
 /* Scoreboard */
 .scoreboard {
-  background: linear-gradient(135deg, #1a2634, #0f1923);
+  background: linear-gradient(135deg, #1a2634, #0a0a0a);
   border: 1px solid #1e3a5f;
   border-radius: 16px;
   padding: 32px;
@@ -312,7 +312,7 @@ const eventIcon = (type) => {
 .minute {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #2563eb;
+  color: #C9A84C ;
 }
 
 .match-status {
@@ -348,7 +348,7 @@ const eventIcon = (type) => {
 }
 
 .draft-option {
-  background-color: #0f1923;
+  background-color: #0a0a0a;
   border: 1px solid #334155;
   border-radius: 8px;
   padding: 16px;
@@ -360,7 +360,7 @@ const eventIcon = (type) => {
 }
 
 .draft-option:hover {
-  border-color: #2563eb;
+  border-color: #cba233 ;
   background-color: #1a2634;
 }
 
@@ -397,7 +397,7 @@ const eventIcon = (type) => {
 }
 
 .btn--primary {
-  background-color: #2563eb;
+  background-color: #C9A84C ;
   color: #ffffff;
 }
 
@@ -463,7 +463,7 @@ const eventIcon = (type) => {
 
 .event--home {
   background-color: rgba(37, 99, 235, 0.15);
-  border-left: 3px solid #2563eb;
+  border-left: 3px solid #C9A84C ;
 }
 
 .event--away {

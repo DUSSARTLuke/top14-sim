@@ -26,7 +26,7 @@ const { isLoading } = storeToRefs(useLoadingStore())
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #0f1923;
+  background-color: #0a0a0a;
   color: #ffffff;
 }
 

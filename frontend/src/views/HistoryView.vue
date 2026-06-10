@@ -69,7 +69,7 @@ h1 {
 }
 
 .link {
-  color: #2563eb;
+  color: #C9A84C ;
   text-decoration: none;
   font-weight: 500;
 }
@@ -130,7 +130,7 @@ h1 {
 }
 
 .btn--primary {
-  background-color: #2563eb;
+  background-color: #C9A84C ;
   color: #ffffff;
 }
 

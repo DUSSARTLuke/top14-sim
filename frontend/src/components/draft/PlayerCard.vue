@@ -40,7 +40,7 @@ const ratingClass = computed(() => {
   display: flex;
   align-items: center;
   gap: 12px;
-  background-color: #0f1923;
+  background-color: #0a0a0a;
   border: 1px solid #1e3a5f;
   border-radius: 8px;
   padding: 10px 12px;
@@ -49,7 +49,7 @@ const ratingClass = computed(() => {
 }
 
 .card:hover {
-  border-color: #2563eb;
+  border-color: #cba233 ;
   background-color: #1a2634;
   transform: translateX(2px);
 }

@@ -33,8 +33,8 @@ const handleLogout = async () => {
 
 <style scoped>
 .header {
-  background-color: #1a2634;
-  border-bottom: 2px solid #2563eb;
+  background-color: #0a0a0a;
+  border-bottom: 1px solid #C9A84C;
   padding: 0 24px;
   position: sticky;
   top: 0;
@@ -51,11 +51,16 @@ const handleLogout = async () => {
 }
 
 .logo {
-  font-size: 1.4rem;
-  font-weight: 700;
+  font-size: 1.3rem;
+  font-weight: 900;
   color: #ffffff;
   text-decoration: none;
-  letter-spacing: 0.5px;
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
+}
+
+.logo span {
+  color: #C9A84C;
 }
 
 .nav {
@@ -65,14 +70,17 @@ const handleLogout = async () => {
 }
 
 .nav-link {
-  color: #94a3b8;
+  color: #64748b;
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+  font-weight: 500;
   transition: color 0.2s;
   background: none;
   border: none;
   cursor: pointer;
   font-family: inherit;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .nav-link:hover,
@@ -81,14 +89,16 @@ const handleLogout = async () => {
 }
 
 .nav-link--cta {
-  background-color: #2563eb;
-  color: #ffffff !important;
+  background: transparent;
+  color: #C9A84C !important;
   padding: 8px 16px;
   border-radius: 6px;
-  font-weight: 500;
+  font-weight: 600;
+  border: 1px solid #C9A84C;
 }
 
 .nav-link--cta:hover {
-  background-color: #1d4ed8;
+  background-color: #C9A84C;
+  color: #000000 !important;
 }
 </style>
